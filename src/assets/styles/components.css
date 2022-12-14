@@ -1,0 +1,8 @@
+.btn-icon {
+  height: 3rem;
+  width: 3rem;
+  background-color: transparent;
+  border: 1px solid rgb(var(--primary-color));
+  padding: 1rem;
+  border-radius: 50%;
+}

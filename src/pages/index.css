@@ -22,15 +22,6 @@
   animation: grow 1s 0.5s forwards ease-out;
 }
 
-@keyframes grow {
-  from {
-    height: 0;
-  }
-  to {
-    height: 200px;
-  }
-}
-
 .header-content::before {
   content: "";
   position: absolute;
