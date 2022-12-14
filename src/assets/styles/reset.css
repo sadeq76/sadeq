@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+  line-height: 1.5em;
+  border: 1px;
+  color: inherit;
+}
+
+:focus {
+  outline: none;
+  border: 1px solid white;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(../images/background-image.jpg);
+  background-color: rgb(var(--background-color) / 0.7);
+  background-blend-mode: darken;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(var(--primary-color));
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.5rem;
+}
+
+a {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}

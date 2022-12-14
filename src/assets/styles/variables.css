@@ -1,0 +1,8 @@
+:root {
+  --primary-color: 255 255 255;
+  --background-color: 0 0 0;
+
+  --base-space: 4;
+
+  --mobile-breakpoint: 480;
+}
