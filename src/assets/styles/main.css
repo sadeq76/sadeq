@@ -4,7 +4,7 @@
 @import url('./variables/sizes.css');
 
 /* Fonts */
-@import url('./fonts.css');
+@import url('./base/typography.css');
 
 /* Base */
 @import url('./base/reset.css');

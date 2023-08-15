@@ -3,7 +3,7 @@
 .primary {
   background-color: rgb(var(--primary-color));
 }
-.text-primary {
+.txt-primary {
   color: rgb(var(--primary-color));
 }
 .border-primary {
@@ -13,7 +13,7 @@
 .background {
   background-color: rgb(var(--background-color));
 }
-.text-background {
+.txt-background {
   color: rgb(var(--background-color));
 }
 .border-background {
@@ -368,3 +368,12 @@
 .h-full {
   height: 100%;
 }
+
+.text-center {
+  text-align: center;
+}
+.bold {
+  font-weight: 600;
+}
+
+/* TODO: Seperate utilities */
