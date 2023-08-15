@@ -1,0 +1,11 @@
+:root[data-theme='blue'] {
+  --primary-color: 247 68 78;
+  --background-color: 247 248 243;
+  --text-color: 0 44 62;
+}
+
+:root[data-theme='blue'][data-theme-mode='dark'] {
+  --primary-color: 247 248 243;
+  --background-color: 247 68 78;
+  --text-color: 0 44 62;
+}

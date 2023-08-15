@@ -1,6 +1,25 @@
-@import url(./fonts.css);
-@import url(./variables.css);
-@import url(./reset.css);
-@import url(./utilities.css);
-@import url(./components.css);
-@import url(./animations.css);
+/* variables */
+@import url('./variables/breakpoints.css');
+@import url('./variables/colors.css');
+@import url('./variables/sizes.css');
+
+/* Fonts */
+@import url('./fonts.css');
+
+/* Base */
+@import url('./base/reset.css');
+@import url('./base/utilities.css');
+
+/* Components */
+@import url('./components/s-btn.css');
+
+/* Themes */
+@import url('./themes/red.css');
+@import url('./themes/pink.css');
+@import url('./themes/blue.css');
+
+/* Animations */
+@import url('./animations/grow.css');
+
+/* Pages */
+@import url('./pages/index.css');

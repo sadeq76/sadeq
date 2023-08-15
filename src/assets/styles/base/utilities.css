@@ -1,6 +1,6 @@
 /* colors */
 
-.bg-primary {
+.primary {
   background-color: rgb(var(--primary-color));
 }
 .text-primary {
@@ -10,7 +10,7 @@
   border-color: rgb(var(--primary-color));
 }
 
-.bg-background {
+.background {
   background-color: rgb(var(--background-color));
 }
 .text-background {

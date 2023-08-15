@@ -3,22 +3,22 @@
   margin: 0;
   box-sizing: border-box;
   font: inherit;
-  line-height: 1.5em;
-  border: 1px;
   color: inherit;
+  line-height: 1.5em;
 }
 
 :focus {
   outline: none;
-  border: 1px solid white;
+  border: calc(1px * var(--border-size)) solid rgb(var(--primary-color));
 }
 
 :root {
+  color: rgb(var(--text-color));
   font-size: 16px;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   width: 100vw;
   height: 100vh;

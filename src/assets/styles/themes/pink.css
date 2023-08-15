@@ -1,0 +1,11 @@
+:root[data-theme='pink'] {
+  --primary-color: 202 44 146;
+  --background-color: 39 39 39;
+  --text-color: 229 244 227;
+}
+
+:root[data-theme='pink'][data-theme-mode='dark'] {
+  --primary-color: 39 39 39;
+  --background-color: 202 44 146;
+  --text-color: 229 244 227;
+}
