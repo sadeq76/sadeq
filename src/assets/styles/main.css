@@ -1,5 +1,6 @@
 /* variables */
 @import url('./variables/breakpoints.css');
+@import url('./variables/colors.css');
 @import url('./variables/sizes.css');
 
 /* Fonts */
@@ -19,3 +20,6 @@
 
 /* Animations */
 @import url('./animations/grow.css');
+
+/* Pages */
+@import url('./pages/index.css');
