@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/sadeq76/ali_rn/issues"
   },
-  "homepage": "https://github.com/sadeq76/ali_rn#readme"
+  "homepage": "https://github.com/sadeq76/ali_rn#readme",
+  "devDependencies": {
+    "eslint": "^8.47.0"
+  }
 }
