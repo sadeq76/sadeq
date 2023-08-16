@@ -1,23 +1,33 @@
 {
   "name": "sadeq-shahmoradi",
   "version": "1.0.0",
-  "description": "this is my portfolio",
+  "description": "Web developer with more than 4 years of experience",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo 'test'"
+    "serve": "live-server"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/sadeq76/sadeq.git"
   },
   "keywords": [
-    "ali",
-    "alirn"
+    "sadeq",
+    "sadegh",
+    "shahmoradi",
+    "sadeq shahmoradi",
+    "farhad",
+    "farhad shahmoradi"
   ],
-  "author": "sadeq shahmoradi",
+  "author": "Sadeq Shahmoradi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sadeq76/ali_rn/issues"
+    "url": "https://github.com/sadeq76/sadeq/issues"
   },
-  "homepage": "https://github.com/sadeq76/ali_rn#readme"
+  "homepage": "https://github.com/sadeq76/sadeq#readme",
+  "devDependencies": {
+    "eslint": "^8.47.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }

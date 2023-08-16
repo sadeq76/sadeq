@@ -23,9 +23,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: url(../images/background-image.jpg);
-  background-color: rgb(var(--background-color) / 0.7);
-  background-blend-mode: darken;
+  background-color: rgb(var(--background-color));
   display: flex;
   flex-direction: column;
   justify-content: center;

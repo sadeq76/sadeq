@@ -1,0 +1,1 @@
+- [ ] Remove live-server from package.json
