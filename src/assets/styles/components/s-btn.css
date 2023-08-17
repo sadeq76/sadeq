@@ -1,8 +1,10 @@
-.btn-icon {
+.btn {
   height: 3rem;
-  width: 3rem;
   background-color: transparent;
-  border: 1px solid rgb(var(--primary-color));
-  padding: 1rem;
-  border-radius: 50%;
+  border: calc(1px * var(--border-width)) solid rgb(var(--primary-color));
+  padding: calc(0.25rem * var(--base-space));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
