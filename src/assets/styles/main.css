@@ -13,6 +13,7 @@
 @import url('./components/s-btn.css');
 
 /* Themes */
+@import url('./themes/status.css');
 @import url('./themes/red.css');
 @import url('./themes/pink.css');
 @import url('./themes/blue.css');

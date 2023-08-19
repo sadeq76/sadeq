@@ -1,0 +1,15 @@
+:root {
+  --disable-color: 220 227 232;
+  --success-color: 7 194 54;
+  --warning-color: 252 158 48;
+  --error-color: 241 70 64;
+  --info-color: 0 133 254;
+}
+
+:root[data-theme-mode='dark'] {
+  --disable-color: 42 63 77;
+  --success-color: 27 207 63;
+  --warning-color: 249 130 15;
+  --error-color: 236 45 43;
+  --info-color: 21 147 250;
+}
