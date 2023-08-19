@@ -1,10 +1,30 @@
 .btn {
   height: 3rem;
-  background-color: transparent;
+
+  color: rgb(var(--primary-color));
+  font-weight: 500;
+
   border: calc(1px * var(--border-width)) solid rgb(var(--primary-color));
   padding: calc(0.25rem * var(--base-space));
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn:not(.disabled):not(:disabled):hover {
+  background-color: rgb(var(--primary-color));
+  color: rgb(var(--light-text-color));
+}
+
+.btn:disabled,
+.btn.disabled {
+  background-color: rgb(var(--disable-color));
+  color: rgb(var(--light-text-color));
+
+  border: none;
+
+  pointer-events: none;
+  /* ! not working why? */
+  /* cursor: not-allowed; */
 }
