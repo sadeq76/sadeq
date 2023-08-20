@@ -4,7 +4,7 @@
   "description": "Web developer with more than 4 years of experience",
   "main": "src/main.js",
   "scripts": {
-    "serve": "live-server"
+    "serve": "node ./manual-live-server/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,5 @@
   "homepage": "https://github.com/sadeq76/sadeq#readme",
   "devDependencies": {
     "eslint": "^8.47.0"
-  },
-  "dependencies": {
-    "live-server": "^1.2.2"
   }
 }
