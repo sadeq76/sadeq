@@ -1,35 +1,33 @@
 /* eslint-disable no-undef */
 const http = require("http");
-const fs = require("fs");
+const fs = require("fs").promises;
 const path = require("path");
 const rootPath = process.cwd();
 const os = require("os");
+
+const contentTypeGenerator = function (filePath) {
+	const extname = path.extname(filePath);
+	switch (extname) {
+	case ".js":
+		return "text/javascript";
+	case ".css":
+		return "text/css";
+	case ".json":
+		return "application/json";
+	case ".png":
+		return "image/png";
+	case ".jpg":
+		return "image/jpg";
+	}
+};
 
 const server = http.createServer((req, res) => {
 	const { method, url } = req;
 
 	if (method === "GET") {
 		let filePath = path.join(rootPath, url === "/" ? "/index.html" : url);
-		let contentType = "text/html";
 
-		const extname = path.extname(filePath);
-		switch (extname) {
-		case ".js":
-			contentType = "text/javascript";
-			break;
-		case ".css":
-			contentType = "text/css";
-			break;
-		case ".json":
-			contentType = "application/json";
-			break;
-		case ".png":
-			contentType = "image/png";
-			break;
-		case ".jpg":
-			contentType = "image/jpg";
-			break;
-		}
+		const contentType = contentTypeGenerator(filePath);
 
 		fs.readFile(filePath, "utf-8", (err, content) => {
 			if (err) {
@@ -43,24 +41,73 @@ const server = http.createServer((req, res) => {
 	}
 });
 
-const interfaces = os.networkInterfaces();
+const clientIp = function () {
+	const interfaces = os.networkInterfaces();
+	const result = [];
 
-const addresses = [];
-
-for (const interfaceName in interfaces) {
-	for (const iface of interfaces[interfaceName]) {
-		if (iface.family === "IPv4" && !iface.internal) {
-			addresses.push(iface.address);
+	for (const interfaceName in interfaces) {
+		for (const iface of interfaces[interfaceName]) {
+			if (iface.family === "IPv4" && !iface.internal) {
+				result.push(iface.address);
+			}
 		}
 	}
-}
 
-const port = 8080;
-const host = addresses[0];
+	return result[0];
+};
 
-server.listen(port, host, () => {
-	console.log(
-		"Server is running at",
-		"\x1b[36m", `http://${host}:${port}`
+const getConfig = async function () {
+	const config = JSON.parse(
+		await fs.readFile(rootPath + "/server.json", "utf-8")
 	);
+
+	config.port = config.port || 8080;
+	config.host = config.host || clientIp();
+
+	return config;
+};
+
+// const watchFilesForHotReload = () => {
+// 	const filesToWatch = ["/index.html"]; // Add other files as needed
+
+// 	filesToWatch.forEach((filePath) => {
+// 		const path = rootPath + filePath;
+// 		fs.watchFile(path, (curr, prev) => {
+// 			if (curr.mtime > prev.mtime) {
+// 				console.log(`${path} changed. Reloading...`);
+// 				stopServer();
+// 				startServer();
+// 			}
+// 		});
+// 	});
+// };
+
+// watchFilesForHotReload();
+
+const startServer = () => {
+	getConfig().then((response) => {
+		const { port, host } = response;
+
+		server.listen(port, host, () => {
+			console.log("Server is running at", "\x1b[36m", `http://${host}:${port}`);
+		});
+	});
+};
+
+const stopServer = () => {
+	if (server) {
+		server.close(() => {
+			console.log("Server stopped.");
+		});
+	}
+};
+
+process.on("SIGINT", () => {
+	console.log(" Stopping server...");
+	// console.log(" Closing watchers and stopping server...");
+	// closeWatchers();
+	stopServer();
+	process.exit();
 });
+
+startServer();
