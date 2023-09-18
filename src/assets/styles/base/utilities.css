@@ -48,7 +48,7 @@
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .justify-start {
@@ -374,6 +374,10 @@
 }
 .bold {
   font-weight: 600;
+}
+
+.d-none {
+  display: none;
 }
 
 /* TODO: Seperate utilities */
